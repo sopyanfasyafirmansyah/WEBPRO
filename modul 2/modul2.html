@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1>sopyan</h1>
+        <nav>
+            <a href="#profil">Profil</a> | 
+            <a href="#jadwal">Jadwal Kuliah</a> | 
+            <a href="#form-data">Form Data</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+
+        <div class="left-column">
+            <section id="profil">
+                <h2>Profil</h2>
+                <p><strong>Nama:</strong> sopyan</p>
+                <p><strong>NIM:</strong> 607022500005</p>
+                <p><strong>Kelas:</strong> D3TK 49-01</p>
+            </section>
+
+            <section id="jadwal">
+                <h2>Jadwal Kuliah</h2>
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Hari</th>
+                            <th>Mata Kuliah</th>
+                            <th>Jam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Senin</td>
+                            <td>Pemrograman Web</td>
+                            <td>07.30 - 10.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Selasa</td>
+                            <td>Basis Data</td>
+                            <td>10.00 - 12.30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Rabu</td>
+                            <td>Jaringan Komputer</td>
+                            <td>13.00 - 15.30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Kamis</td>
+                            <td>Algoritma dan Pemrograman</td>
+                            <td>07.30 - 10.00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Jumat</td>
+                            <td>Sistem Digital</td>
+                            <td>08.00 - 10.30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <section id="form-data">
+                <h2>Form Data Mahasiswa</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nama-form">Nama:</label>
+                        <input type="text" id="nama-form" value="sopyan">
+                    </div>
+                    <div class="form-group">
+                        <label for="nim-form">NIM:</label>
+                        <input type="text" id="nim-form" value="607022500005">
+                    </div>
+                    <div class="form-group">
+                        <label for="jurusan">Jurusan:</label>
+                        <select id="jurusan">
+                            <option>Teknik Komputer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hobi:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> Membaca</label>
+                            <label><input type="checkbox"> Olahraga</label>
+                            <label><input type="checkbox"> Bersepeda</label>
+                        </div>
+                    </div>
+                    <button type="submit">Kirim</button>
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <p>sopyan fasya f - 607022500005 - D3TK 49-01</p>
+    </footer>
+
+</body>
+</html>
