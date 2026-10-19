@@ -1,0 +1,46 @@
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling untuk pesan error dan sukses */
+.error {
+    color: red;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 3px;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Profil Mahasiswa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form Profil Mahasiswa</h1>
+
+        <form id="formProfil">
+
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama">
+            <span id="errorNama" class="error"></span>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span id="errorEmail" class="error"></span>
+
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat"></textarea>
+            <span id="errorAlamat" class="error"></span>
+
+            <button type="submit">Kirim</button>
+
+        </form>
+
+        <p id="pesanSukses" class="success"></p>
+    </div>
+
+    <script src="jurnal.js"></script>
+
+</body>
+</html>
