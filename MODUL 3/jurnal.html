@@ -38,3 +38,56 @@
 
 </body>
 </html>
+
+
+
+ <!-- Script Fungsi Pemrosesan Pesanan -->
+    <script>
+        function prosesPesanan(event) {
+            // Mencegah formulir dari reload/refresh halaman
+            event.preventDefault();
+
+            // Mengambil nilai dari form input
+            const nama = document.getElementById('namaPembeli').value;
+            const meja = document.getElementById('nomorMeja').value;
+            const pesanan = document.getElementById('namaPesanan').value;
+
+            // Mengambil elemen tempat notifikasi
+            const notif = document.getElementById('notifPesan');
+
+            // Mengisi pesan notifikasi
+            notif.innerHTML = `<strong>Pesanan Berhasil!</strong><br>Terima kasih <b>${nama}</b> (Meja ${meja}), pesanan <b>${pesanan}</b> Anda sedang diproses.`;
+
+            // Menampilkan kotak notifikasi
+            notif.style.display = 'block';
+
+            // Mengosongkan form input kembali
+            document.getElementById('orderForm').reset();
+
+            // Opsional: Hilangkan notifikasi secara otomatis setelah 6 detik
+            setTimeout(() => {
+                notif.style.display = 'none';
+            }, 6000);
+        }
+    </script>
+
+
+
+
+
+
+.alert-box {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 12px 20px;
+    background: transparent;
+    color: #0f5132;
+    border: 2px solid #0f5132;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+}

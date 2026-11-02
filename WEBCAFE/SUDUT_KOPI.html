@@ -5,51 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUDUT KOPI</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- File CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
+        <!-- Navbar -->
         <header class="navbar">
+            <img src="baground" class="baground"> 
             <div class="logo">SUDUT KOPI</div>
             <nav class="nav-links">
                 <a href="#" class="active">beranda</a>
-                <a href="#">harga</a>
+                <a href="#menu">harga</a>
                 <a href="#">layanan</a>
                 <a href="#">Tentang kami</a>
             </nav>
-            <div class="login-btn">login</div>
         </header>
 
-        <section class="hero">
-            <div class="hero-text">
-                <p class="subtitle">SELAMAT DATANG DI</p>
-                <h1 class="main-title">SUDUT KOPI</h1>
-                <p class="description">Tempat terbaik untuk nugas, dan ngopi santai</p>
-                <a href="#" class="btn-primary">Lihat Layanan &rarr;</a>
-                
-                <div class="section-title">
-                    <h2>LAYANAN KAMI</h2>
-                    <p>Berbagai fasilitas untuk menunjang kebutuhan anda.</p>
+        <!-- Hero Section -->
+    <section id="beranda" class="hero">
+    <!-- Tambahkan tag img di sini -->
+    <img src="biji_kopi.webp" alt="Foto Sudut Kopi" class="hero-img">
+    
+    <div class="hero-content">
+        <p>SELAMAT DATANG DI</p>
+        <h1>SUDUT KOPI</h1>
+        <p>Tempat terbaik untuk nugas, dan ngopi santai</p>
+        <a href="#pesan" class="btn-primary">Lihat Layanan →</a>
+    </div>
+</section>
+
+        <!-- Layanan Kami -->
+        <section class="services-section">
+            <div class="section-title">
+                <h2>LAYANAN KAMI</h2>
+                <p>Berbagai fasilitas untuk menunjang kebutuhan anda.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Dine In & Take Away</h3>
+                    <p>Pilih untuk menikmati kopi di tempat atau dibawa pulang</p>
+                </div>
+                <div class="card">
+                    <h3>kopi dan snack</h3>
+                    <p>Nikmati kopi, teh, dan cemilan favorit anda</p>
+                </div>
+                <div class="card">
+                    <h3>Ruang meeting</h3>
+                    <p>Ruang untuk rapat, diskusi kelompok, dan pertemuan kecil</p>
                 </div>
             </div>
         </section>
 
-        <section class="services">
-            <div class="card">
-                <h3>Akses Internet Cepat</h3>
-                <p>Koneksti stabil dan cepat untuk browsing, kerja, dan nugas</p>
+        <!-- Daftar Harga & Menu -->
+        <section id="menu" class="menu-section">
+            <div class="section-title">
+                <h2>DAFTAR HARGA & MENU</h2>
+                <p>Pilih menu favorit Anda dan isi form pemesanan di bawah.</p>
             </div>
-            <div class="card">
-                <h3>kopi dan snack</h3>
-                <p>Nikmati kopi, teh, dan cemilan favorit anda</p>
+
+            <div class="services-grid">
+                <!-- Menu 1 -->
+                <div class="card">
+                    <img src="aren.webp" alt="Kopi Susu Aren" class="menu-img">
+                    <h3>Kopi Susu Aren</h3>
+                    <p class="price">Rp 18.000</p>
+                </div>
+                <!-- Menu 2 -->
+                <div class="card">
+                    <img src="americano.webp" alt="Americano" class="menu-img">
+                    <h3>Americano</h3>
+                    <p class="price">Rp 15.000</p>
+                </div>
+                <!-- Menu 3 -->
+                <div class="card">
+                    <img src="Spaghetti.webp" alt="Spaghetti " class="menu-img">
+                    <h3>Spaghetti </h3>
+                    <p class="price">Rp 25.000</p>
+                </div>
+                <!-- Menu 4 -->
+                <div class="card">
+                    <img src="french-fries.webp" alt="French Fries" class="menu-img">
+                    <h3>French Fries</h3>
+                    <p class="price">Rp 15.000</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Ruang meeting</h3>
-                <p>Ruang untuk rapat, diskusi kelompok, dan pertemuan kecil</p>
+        </section>
+
+        <!-- Form Pemesanan -->
+        <section id="form-pesanan" class="order-section">
+            <div class="section-title">
+                <h2>FORM PEMESANAN</h2>
+                <p>Isi data diri dan konfirmasi pesanan Anda di sini.</p>
             </div>
+
+            <!-- Kotak Notifikasi di atas form -->
+            <div id="notifPesan" class="alert-box" style="display: none;"></div>
+
+            <form id="orderForm" class="order-form" onsubmit="prosesPesanan(event)">
+                <div class="form-group">
+                    <label for="namaPembeli">Nama Pembeli:</label>
+                    <input 
+                        type="text" 
+                        id="namaPembeli" 
+                        placeholder="Masukkan nama Anda" 
+                        required
+                        oninvalid="this.setCustomValidity('Harap isi nama pembeli terlebih dahulu!')"
+                        oninput="this.setCustomValidity('')"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="nomorMeja">Nomor Meja:</label>
+                    <input 
+                        type="number" 
+                        id="nomorMeja" 
+                        placeholder="Contoh: 05" 
+                        min="1" 
+                        required
+                        oninvalid="this.setCustomValidity('Harap isi nomor meja Anda!')"
+                        oninput="this.setCustomValidity('')"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="namaPesanan">Nama Pesanan:</label>
+                    <select 
+                        id="namaPesanan" 
+                        required
+                        oninvalid="this.setCustomValidity('Harap pilih menu pesanan!')"
+                        oninput="this.setCustomValidity('')"
+                    >
+                        <option value="">-- Pilih Pesanan --</option>
+                        <option value="Kopi Susu Aren">Kopi Susu Aren</option>
+                        <option value="Americano">Americano</option>
+                        <option value="Roti Bakar">Spaghetti </option>
+                        <option value="French Fries">French Fries</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Kirim Pesanan</button>
+                <footer>
+                    <p>&copy; 2026 SUDUT KOPI. Hak Cipta Dilindungi.</p>
+                 </footer>
+            </form>
         </section>
     </div>
 
+    <!-- File JavaScript Eksternal Jika Diperlukan -->
+    <script src="script.js"></script>
 </body>
 </html>
