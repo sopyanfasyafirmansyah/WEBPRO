@@ -56,16 +56,16 @@ body {
 
 /* HERO SECTION */
 .hero {
-    /* Menggunakan URL gambar dari internet atau file lokal */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('biji_kopi.webp') no-repeat center center/cover;
-    height: 50vh;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Mengatur agar konten berada di tengah */
     align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 40px 20px;
-}
+    text-align: center;      /* Membuat teks rata tengah */
+    padding: 50px;
+    background-image: url('biji_kopi.webp'); /* Background utama */
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; /* Tambahkan ini agar gambar tidak berulang/dobel */
+} 
 
 .subtitle {
     font-size: 14px;
