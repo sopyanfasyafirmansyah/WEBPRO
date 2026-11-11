@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Praktikum - Validasi Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 120px; }
+        .error { color: red; font-size: 12px; margin-left: 125px; display: block; }
+    </style>
+</head>
+<body>
+
+    <h2>Form Pendaftaran Mahasiswa</h2>
+    
+    <form id="latihanForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" onblur="validateNama()">
+            <span id="errorNama" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" onblur="validateEmailField()">
+            <span id="errorEmail" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="umur">Umur (1-100):</label>
+            <input type="number" id="umur" onblur="validateUmur()">
+            <span id="errorUmur" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label> </label>
+            <input type="submit" value="Kirim">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
